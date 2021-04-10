@@ -29,6 +29,7 @@ export class DogStore implements IDogStore {
       this.error = null;
       this.dogSrc = data.message;
     } catch (err) {
+      this.fetching = false;
       this.error = err;
       this.dogSrc = '';
     }
